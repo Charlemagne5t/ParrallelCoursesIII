@@ -13,7 +13,7 @@ public class SolutionTest {
         int expected = 8;
         int actual = new Solution().minimumTime(n, relations, time);
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -30,6 +30,18 @@ public class SolutionTest {
         int expected = 12;
         int actual = new Solution().minimumTime(n, relations, time);
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void minimumTimeTest3() {
+        int n = 2;
+        int[][] relations = {
+                {2, 1}
+        };
+        int[] time = {10000, 10000};
+        int expected = 20000;
+        int actual = new Solution().minimumTime(n, relations, time);
+
+        Assert.assertEquals(expected, actual);
     }
 }
